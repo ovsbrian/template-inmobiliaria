@@ -3,7 +3,7 @@ import IconCards from "./IconCards";
 
 const Card = () => {
   return (
-    <div className="w-[345px] h-[400px] rounded-sm  shadow-lg hover:shadow-xl cursor-pointer">
+    <div className="md:w-[300px] md:h-[360px] 2xl:w-[345px] 2xl:h-[400px] rounded-sm  shadow-lg hover:shadow-xl cursor-pointer">
       <div className="h-3/5 w-full rounded-sm overflow-hidden">
         <img
           src="./casa1.jpg"
@@ -14,7 +14,7 @@ const Card = () => {
       <div className="h-2/5 mx-2 flex flex-col gap-1 justify-center p-2  mt-2">
         <div className="h-1/2">
           <span className="text-2xl font-bold">$ 1,000,000 USD</span>
-          <h4 className="text-sm font-light">
+          <h4 className="md:text-xs 2xl:text-sm  font-light">
             31, Gedawang Permai St, Semarang
           </h4>
         </div>
