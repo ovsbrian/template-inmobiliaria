@@ -1,7 +1,7 @@
 const IconCards = ({ svg, children, info, metros }) => {
   return (
-    <div className="flex flex-col">
-      <div className="flex gap-1 items-end font-semibold">
+    <div className="flex flex-col w-16 ">
+      <div className="flex gap-1 font-semibold ">
         <img src={svg} alt={children} />
         <span>
           {info}
