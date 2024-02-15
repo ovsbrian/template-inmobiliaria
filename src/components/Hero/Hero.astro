@@ -1,0 +1,62 @@
+---
+import { Button } from "../ui/button";
+import TituloWeb from "../ui/Titulos";
+import DropMenuHero from "./DropMenuHero";
+---
+
+<div class="h-[500px] bg-[url('./houseHero.jpg')] bg-no-repeat bg-cover px-40">
+  <div class="flex flex-col h-full justify-center items-center gap-10">
+    <div class="text-center">
+      <TituloWeb>Descubre tu próximo hogar</TituloWeb>
+      <span class="text-2xl text-white font-semibold"
+        >Expertos en encontrar el lugar perfecto para ti</span
+      >
+    </div>
+    <div
+      class="bg-slate-200 rounded-sm w-full h-16 flex justify-center gap-3 items-center"
+    >
+      <DropMenuHero
+        titulo={"Alquiilar"}
+        opciones={["Comprar", "Alquilar"]}
+        client:load
+      />
+      <DropMenuHero
+        titulo={"Precio"}
+        opciones={[
+          "U$S 0 - 30.000",
+          "U$S 30.000 - 60.000",
+          "U$S 60.000 - 100.000",
+        ]}
+        client:load
+      />
+
+      <DropMenuHero
+        titulo={"Localidad"}
+        opciones={[
+          "Artigas",
+          "Canelones",
+          "Cerro Largo",
+          "Colonia",
+          "Durazno",
+          "Flores",
+          "Florida",
+          "Lavalleja",
+          "Maldonado",
+          "Montevideo",
+          "Paysandú",
+          "Río Negro",
+          "Rivera",
+          "Rocha",
+          "Salto",
+          "San José",
+          "Soriano",
+          "Tacuarembó",
+          "Treinta y Tres",
+        ]}
+        client:load
+      />
+
+      <Button className="w-48" variant="destructive">Buscar</Button>
+    </div>
+  </div>
+</div>
