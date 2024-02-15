@@ -13,16 +13,16 @@ import { useState } from "react";
 const Funca = ({ opciones, titulo }) => {
   const [valor, setValor] = useState(titulo);
   return (
-    <NavigationMenu className="w-80   ">
-      <NavigationMenuList className="w-80 ">
-        <NavigationMenuItem className="w-80 ">
-          <NavigationMenuTrigger className="w-80 flex justify-between font-semibold">
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem className="md:w-64 2xl:w-80 ">
+          <NavigationMenuTrigger className="flex justify-between font-semibold w-full">
             {valor}
           </NavigationMenuTrigger>
           <NavigationMenuContent className="flex flex-col w-80 min-h-28 justify-between items-center ">
             <ScrollArea
               scrollbarColor="#000000"
-              className="h-[160px] w-[320px] rounded-md border p-4"
+              className="h-[160px] md:w-64 2xl:w-80 rounded-md border p-4"
             >
               {opciones.map((opcion, index) => (
                 <NavigationMenuLink
