@@ -1,0 +1,14 @@
+---
+export function getStaticPaths() {
+  return [{ params: { id: "1" } }];
+}
+import Layout from "../../layouts/Layout.astro";
+import "@/styles/globals.css";
+const { id } = Astro.params;
+---
+
+<Layout title={id}>
+  <div class="px-40 my-10">
+    <h1>{id}</h1>
+  </div>
+</Layout>

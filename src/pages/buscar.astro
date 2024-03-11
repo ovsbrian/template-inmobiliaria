@@ -6,10 +6,11 @@ import Card from "../components/ui/Card";
 import { Button } from "../components/ui/button";
 import DropMenuHero from "../components/Hero/DropMenuHero";
 import { Input } from "../components/ui/input";
+import CheckboxItems from "../components/Checkbox/CheckBoxItems";
 ---
 
 <Layout title="Welcome to Astro.">
-  <div class="mx-40">
+  <div class="mx-40 mb-20">
     <div class="h-32 flex flex-col justify-center">
       <TituloWeb color="text-black text-4xl">
         Resultados para Montevideo
@@ -17,15 +18,16 @@ import { Input } from "../components/ui/input";
       <span>243 resultados</span>
     </div>
     <div class="flex w-full gap-2">
-      <div class="h-96 w-1/3 flex flex-col gap-2">
+      <div class="w-1/3 flex flex-col gap-4">
         <div class="flex w-full gap-1">
           <Button className="w-1/2">Comprar</Button>
           <Button className="w-1/2">Alquilar</Button>
         </div>
 
-        <div class="flex justify-start w-full">
+        <div class="flex justify-center flex-col gap-4">
           <DropMenuHero
-            className="w-full"
+            classOfStyle="w-[500px]  "
+            classOfStyleScroll="w-[500px]  h-[300px]"
             titulo={"Localidad"}
             opciones={[
               "Artigas",
@@ -50,20 +52,49 @@ import { Input } from "../components/ui/input";
             ]}
             client:load
           />
-        </div>
-        <div class="flex flex-col justify-center p-4 gap-2">
-          <span>Precio</span>
-          <div class="flex gap-2">
-            <Input type="number" placeholder="Mín." min={0} />
-            <Input type="number" placeholder="Máx." min={0} />
+
+          <div class="flex flex-col justify-center p-4 gap-2 w-full">
+            <h3>Tipo de vivienda</h3>
+            <div class="flex gap-4 flex-col">
+              <CheckboxItems htmlFor={"checkbox"} client:load>
+                Opción 1
+              </CheckboxItems>
+              <CheckboxItems htmlFor={"checkbox2"} client:load>
+                Opción 2
+              </CheckboxItems>
+              <CheckboxItems htmlFor={"checkbox3"} client:load>
+                Opción 3
+              </CheckboxItems>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center p-4 gap-2 w-full">
+            <span>Precio</span>
+            <div class="flex gap-2">
+              <Input type="number" placeholder="Mín." min={0} />
+              <Input type="number" placeholder="Máx." min={0} />
+            </div>
+          </div>
+          <div class="flex flex-col justify-center p-4 gap-2 w-full">
+            <h3>Tipo de vivienda</h3>
+            <div class="flex gap-4 flex-col">
+              <CheckboxItems htmlFor={"checkbox"} client:load>
+                Opción 1
+              </CheckboxItems>
+              <CheckboxItems htmlFor={"checkbox2"} client:load>
+                Opción 2
+              </CheckboxItems>
+              <CheckboxItems htmlFor={"checkbox3"} client:load>
+                Opción 3
+              </CheckboxItems>
+            </div>
           </div>
         </div>
       </div>
       <div class="min-h-96 w-2/3 flex flex-col gap-2">
-        <Card client:load />
-        <Card client:load />
-        <Card client:load />
-        <Card client:load />
+        <Card client:load id={1} />
+        <Card client:load id={2} />
+        <Card client:load id={3} />
+        <Card client:load id={4} />
       </div>
     </div>
   </div>
